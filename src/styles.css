@@ -32,3 +32,9 @@
 .fadeIn {
   animation-name: fadeIn;
 }
+
+
+.logo-casa {  
+  height: 100px;
+  width: auto;
+}
