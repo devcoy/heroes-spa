@@ -25,8 +25,8 @@ export class HeroeCardComponent implements OnInit {
 
   getHeroe() {
     //console.log(this.index);
-    //this._router.navigate(['/heroe', this.index]);
-    this.heroeSelected.emit(this.index); // Emito el evento
+    this._router.navigate(['/heroe', this.index]);
+    //this.heroeSelected.emit(this.index); // Emito el evento
   }
 
 }
