@@ -2,16 +2,9 @@
 <hr/>
 <h3 class="mb-4">Resultados de búsquedad para <i>"{{ searchString }}"</i></h3>
 <div class="card-columns" *ngIf="heroes.length > 0">
-  <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">
-    <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
-    <div class="card-body">
-      <h5 class="card-title">{{ heroe.nombre }}</h5>
-      <p class="card-text">{{ heroe.bio }}</p>
-      <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
-      <button class="btn btn-outline-primary btn-block" (click)="getHeroe(i)">Ver más...</button> 
-    </div>
-  </div>  
+  <app-heroe-card [heroe]="heroe" [index]="i" *ngFor="let heroe of heroes; let i = index"></app-heroe-card>
 </div> 
+
 <div class="jumbotron" *ngIf="heroes.length < 1">
   <h1 class="display-4">Sin resultados</h1>
   <p class="lead">No hemos encontradp resultados para <i>"{{ searchString }}"</i></p>
